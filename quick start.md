@@ -64,7 +64,7 @@ methodss方法必须在schema编译为model之前添加
       console.log(kittens)
     })
     
-####a通过条件查询文档实例
+####通过条件查询文档实例
 
     Kitten.find({ name: /^Fluff/ }, callback)
 
