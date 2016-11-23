@@ -1,6 +1,6 @@
 ##Getting Started
 ####开始使用Mongoosea前，请先安装好[MongoDB](http://www.mongodb.org/downloads)和[Node.js](https://nodejs.org/en/)
-npm安装mongoose
+####npm安装mongoose
 
 
     $ npm install mongoose
@@ -18,13 +18,13 @@ npm安装mongoose
       // yay!
     });
 
-####定义Schema
+####定义模式Schema
 
     var kittySchema = mongoose.Schema({
         name: String
     })
 
-####将Schema编译为Model
+####将Schema编译为模型Model
 
     var Kitten = mongoose.model('Kitten', kittySchema)
 
