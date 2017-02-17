@@ -1,4 +1,5 @@
-#Schemas
+#Schemas模式
+
 ###定义Schema
 Mongoose里的一切都始于Schema。每一个schemas映射到对应的MongoDB数据库的集合collection，并定义对应集合的文档形式
 
