@@ -58,7 +58,7 @@ dog.findSimilarTypes(function(err, dogs) {
 ##
 
 ###静态方法statics
-给模型添加静态方法
+给模式添加静态方法
 ```
 // assign a function to the "statics" object of our animalSchema
 animalSchema.statics.findByName = function(name, cb) {
