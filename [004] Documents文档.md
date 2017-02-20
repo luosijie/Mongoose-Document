@@ -2,11 +2,11 @@
 Mongoose文档
 
 ###Retrieving检索
-Mongoose检索方法有很多种,Querying章节会详细介绍
+Mongoose检索方法有很多种, 详情可以阅读Querying章节
 
 ###Updating更新
 
-Mongoose更新文档的方法有很多种,比较常见的方法可以用 findById
+Mongoose更新文档的方法有很多种, findById是一个比较传统的方法
 ```
 Tank.findById(id, function (err, tank) {
   if (err) return handleError(err);
@@ -30,4 +30,7 @@ Tank.findByIdAndUpdate(id, { $set: { size: 'large' }}, { new: true }, function (
 });
 ```
 ###Validating验证
-文档在保存之前往往会先经过验证，Validating章节会详细介绍
+文档在保存之前往往会先经过验证，详情可以阅读 Validating 章节
+
+##Sub Docs子文档
+
