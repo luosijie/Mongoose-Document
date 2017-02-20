@@ -1,5 +1,6 @@
-##Models模型
+#Models模型
 models是由Schema(模式)定义的构造器。通过models可以实现数据库的文档操作。    
+
 ###编译第一个models
 ```
 var schema = new mongoose.Schema({ name: 'string', size: 'string' });
