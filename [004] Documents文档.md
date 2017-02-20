@@ -34,3 +34,39 @@ Tank.findByIdAndUpdate(id, { $set: { size: 'large' }}, { new: true }, function (
 
 ##Sub Docs子文档
 
+Sub-documents嵌套在父文档里，而且有自己的Schema模式
+```
+var childSchema = new Schema({ name: 'string' });
+
+var parentSchema = new Schema({
+  children: [childSchema]
+})
+```
+
+Sub-documents继承普通文档的所有特性，唯一不同的是，Sub-documents的保存要依赖于父文档。
+```
+var Parent = mongoose.model('Parent', parentSchema);
+var parent = new Parent({ children: [{ name: 'Matt' }, { name: 'Sarah' }] })
+parent.children[0].name = 'Matthew';
+parent.save(callback);
+```
+如果子文档的中间件出错，报错会发生在父文档的 save() 函数中
+```
+childSchema.pre('save', function (next) {
+  if ('invalid' == this.name) return next(new Error('#sadpanda'));
+  next();
+});
+
+var parent = new Parent({ children: [{ name: 'invalid' }] });
+parent.save(function (err) {
+  console.log(err.message) // #sadpanda
+})
+```
+
+###查找子文档
+每一个文档都有一个唯一 _id，通过唯一的 _id 可以找到子文档
+```
+var doc = parent.children.id(_id);
+```
+
+未完待续...
