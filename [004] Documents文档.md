@@ -4,6 +4,8 @@ Mongoose文档
 ###Retrieving检索
 Mongoose检索方法有很多种, 详情可以阅读Querying章节
 
+##
+
 ###Updating更新
 
 Mongoose更新文档的方法有很多种, findById是一个比较传统的方法
@@ -29,6 +31,8 @@ Tank.findByIdAndUpdate(id, { $set: { size: 'large' }}, { new: true }, function (
   res.send(tank);
 });
 ```
+##
+
 ###Validating验证
 文档在保存之前往往会先经过验证，详情可以阅读 Validating 章节
 
@@ -62,6 +66,8 @@ parent.save(function (err) {
   console.log(err.message) // #sadpanda
 })
 ```
+
+##
 
 ###查找子文档
 每一个文档都有一个唯一 _id，通过唯一的 _id 可以找到子文档
