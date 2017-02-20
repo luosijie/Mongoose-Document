@@ -20,6 +20,8 @@ Mongoose里的一切都始于Schema。每一个schemas映射到对应的MongoDB�
 
 在blogSchemad定义的每个键key将被转换为相关SchemaType定义一个属性。例如，标题(title)将被转换为字符串(String)的 SchemaType 并将日期(date)转换为日期的 SchemaType 。键（keys）也可以被指定嵌套的对象，包含进一步的键/类型定义（例如，上面的 meta属性）
 
+##
+
 ###允许使用的SchemaTypes：
 
 - String
