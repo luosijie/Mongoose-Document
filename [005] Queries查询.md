@@ -22,10 +22,11 @@ Person.findOne({ 'name.last': 'Ghost' }, 'name occupation', function (err, perso
 在上面的例子中，查询结果 person 通过回调函数返回。在Mongoose中，所有的回调函数使用固定的格式: callback(error, result)。当在执行查询时发生了错误，将只返回错误参数不返回查询结果，,同样的，如果查询成功执行，就不会有错误信息。
 
 > 当查询成功时，回调函数按固定格式：callback（error, result）返回结果。 具体返回什么样的数据，取决于查询的方式。
-> findOne(): 返回单个文档数据
-> find(): 返回一个文档数组
-> count(): 返回文档数量
-> update(): 返回更新的文档
+> + findOne(): 返回单个文档数据
+> + find(): 返回一个文档数组
+> + count(): 返回文档数量
+> + update(): 返回更新的文档
+
 现在，来看看没有回调函数的情况:
 
 ```
