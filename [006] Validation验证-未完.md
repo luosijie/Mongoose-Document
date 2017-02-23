@@ -175,4 +175,45 @@ var toySchema = new Schema({
       assert.equal(err.name, 'ValidationError');
     });
 ```
-未完待续...
+###Required Validators On Nested Objects嵌套对象require啊验证器
+
+Mongoose嵌套对象定义 验证器 有点棘手,因为嵌套对象没有完整的路径
+
+ ```
+  var personSchema = new Schema({
+      name: {
+        first: String,
+        last: String
+      }
+    });
+
+    assert.throws(function() {
+      // This throws an error, because 'name' isn't a full fledged path
+      personSchema.path('name').required(true);
+    }, /Cannot.*'required'/);
+
+    // To make a nested object required, use a single nested schema
+    var nameSchema = new Schema({
+      first: String,
+      last: String
+    });
+
+    personSchema = new Schema({
+      name: {
+        type: nameSchema,
+        required: true
+      }
+    });
+
+    var Person = db.model('Person', personSchema);
+
+    var person = new Person();
+    var error = person.validateSync();
+    assert.ok(error.errors['name']);
+ ```
+ 
+ ###Update Validators更新验证器
+ 
+ 
+ 
+ 
