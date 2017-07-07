@@ -1,4 +1,4 @@
-#Queries查询
+# Queries查询
 Mongoose可以通过models的一些静态方法来检索文档
 当执行一个模型函数时，通常有两种结果：
 
@@ -73,7 +73,7 @@ Person.
 
 详情可以阅读详细的[API文档](http://mongoosejs.com/docs/api.html#query-js)
   
-###文档引用
+### 文档引用
 MongoDB本身没有联表，但是有时会需要引用其他的文档。这时候就可以用 population 来事项类似联表的功能
   
 ### Streaming
