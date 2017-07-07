@@ -1,7 +1,7 @@
-#Models模型
+# Models模型
 models是由Schema(模式)定义的构造器。通过models可以实现数据库的文档操作。    
 
-###编译第一个models
+### 编译第一个models
 ```
 var schema = new mongoose.Schema({ name: 'string', size: 'string' });
 var Tank = mongoose.model('Tank', schema);
@@ -12,7 +12,7 @@ models的第一个参数“tank”是你的模型集合的单数名称。Mongoos
 
 ##
 
-###构建document文档
+### 建document文档
 document是models的实例,document可以很方便的保存到数据库中
 
 ```
@@ -35,7 +35,7 @@ Tank.create({ size: 'small' }, function (err, small) {
 
 ##
 
-###查询
+### 查询
 Mongoose支持丰富的文档查询方法。可以使用find，findById，findOne，或者where等静态方法来查找文档
 
 ```
@@ -44,7 +44,7 @@ Tank.find({ size: 'small' }).where('createdDate').gt(oneYearAgo).exec(callback);
 
 ##
 
-###删除
+### 删除
 Mongoose提供删除文档的静态方法, 用于删除符合条件的文档
 ```
 Tank.remove({ size: 'large' }, function (err) {
@@ -54,7 +54,7 @@ Tank.remove({ size: 'large' }, function (err) {
 ```
 ##
 
-###更新
+### 更新
 每个模型都有自己的更新方法，用于修改数据库中的文档，不将它们返回到您的应用程序。
 详细看[API](http://mongoosejs.com/docs/api.html#model_Model.update)文档。
 
