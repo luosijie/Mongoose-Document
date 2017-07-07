@@ -1,6 +1,6 @@
-#Schemas模式
+# Schemas模式
 
-###定义Schema
+### 定义Schema
 Mongoose里的一切都始于Schema。每一个schemas映射到对应的MongoDB数据库的集合collection，并定义对应集合的文档形式
 
     var mongoose = require('mongoose');
@@ -22,7 +22,7 @@ Mongoose里的一切都始于Schema。每一个schemas映射到对应的MongoDB�
 
 ##
 
-###允许使用的SchemaTypes：
+### 允许使用的SchemaTypes：
 
 - String
 - Number
@@ -37,7 +37,7 @@ Schema不仅定义了文档和属性的结构，还定义了文档的*实例方�
 
 ##
 
-###实例方法methods
+### 实例方法methods
 模型的实例是文档（document）。文档本身有自己的内置方法。我们也可以自定义文档的实例方法
 ```
 // define a schema
@@ -59,7 +59,7 @@ dog.findSimilarTypes(function(err, dogs) {
 ```
 ##
 
-###静态方法statics
+### 静态方法statics
 给模式添加静态方法
 ```
 // assign a function to the "statics" object of our animalSchema
