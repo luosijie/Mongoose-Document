@@ -1,4 +1,4 @@
-## mongoose docs
+## Mongoose Document
 Mongoose官方文档翻译
 http://mongoosejs.com/docs/index.html
 
