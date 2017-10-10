@@ -1,4 +1,4 @@
-# 起步
+## 起步
 > 开始使用Mongoose前，请先安装好[MongoDB](http://www.mongodb.org/downloads)和[Node.js](https://nodejs.org/en/)
 #### npm安装mongoose
 
