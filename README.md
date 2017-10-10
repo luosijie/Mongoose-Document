@@ -1,6 +1,5 @@
-### mongoose docs
+## mongoose docs
 Mongoose官方文档翻译
-
 http://mongoosejs.com/docs/index.html
 
 #### 例子
