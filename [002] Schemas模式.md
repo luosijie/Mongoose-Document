@@ -22,8 +22,6 @@ var blogSchema = new Schema({
 
 在blogSchemad定义的每个键key将被转换为相关SchemaType定义一个属性。例如，标题(title)将被转换为字符串(String)的 SchemaType 并将日期(date)转换为日期的 SchemaType 。键（keys）也可以被指定嵌套的对象，包含进一步的键/类型定义（例如，上面的 meta属性）
 
-##
-
 ### 允许使用的SchemaTypes：
 
 - String
@@ -36,8 +34,6 @@ var blogSchema = new Schema({
 - Array
 
 Schema不仅定义了文档和属性的结构，还定义了文档的*实例方法*、*静态模型方法*、*复合索引*等
-
-##
 
 ### 实例方法methods
 模型的实例是文档（document）。文档本身有自己的内置方法。我们也可以自定义文档的实例方法
@@ -62,8 +58,6 @@ dog.findSimilarTypes(function(err, dogs) {
   console.log(dogs); // woof
 });
 ```
-
-##
 
 ### 静态方法statics
 给模式添加静态方法
