@@ -3,6 +3,6 @@ Mongoose官方文档翻译
 
 参考：     
 
-http://mongoosejs.com/docs/guide.html
+http://mongoosejs.com/docs/index.html
 
 
